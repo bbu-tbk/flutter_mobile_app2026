@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobile_app2026/core/data/local/user_access_token.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/category/controller/category_controller.dart';
 import 'package:flutter_mobile_app2026/moduls/home/controller/home_controller.dart';
 import 'package:flutter_mobile_app2026/routes/app_route_name.dart';
 import 'package:get/get.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({super.key});
+import '../controller/category_form_controller.dart';
+
+class CategoryFormView extends GetView<CategoryFormController> {
+  const CategoryFormView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class HomeView extends GetView<HomeController> {
             ),
             ListTile(
               onTap: (){
-                Get.toNamed(AppRouteName.adminDashboard);
+
               },
               leading: Icon(Icons.dashboard, color: Colors.white,),
               title: Text("Dashboard", style: TextStyle(color: Colors.white),),

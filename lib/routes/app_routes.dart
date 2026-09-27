@@ -1,3 +1,14 @@
+import 'package:flutter_mobile_app2026/moduls/admin/category/binding/category_binding.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/category/binding/category_form_binding.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/category/controller/category_form_controller.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/category/view/category_form_view.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/category/view/category_view.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/dashboard/binding/dashboard_binding.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/dashboard/view/dashboard_view.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/post/binding/post_binding.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/post/binding/post_form_binding.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/post/view/post_form_view.dart';
+import 'package:flutter_mobile_app2026/moduls/admin/post/view/post_view.dart';
 import 'package:flutter_mobile_app2026/moduls/auth/forgot/binding/forgot_binding.dart';
 import 'package:flutter_mobile_app2026/moduls/auth/forgot/view/forgot_view.dart';
 import 'package:flutter_mobile_app2026/moduls/auth/login/binding/login_binding.dart';
@@ -21,6 +32,11 @@ class AppRoutes{
       GetPage(name: AppRouteName.login, page: ()=> LoginView(), binding: LoginBinding()),
       GetPage(name: AppRouteName.register, page: ()=> RegisterView(), binding: RegisterBinding()),
       GetPage(name: AppRouteName.forgot, page: ()=> ForgotView(), binding: ForgotBinding()),
+      GetPage(name: AppRouteName.adminDashboard, page: ()=> DashboardView(), binding: DashboardBinding()),
+      GetPage(name: AppRouteName.adminPosts, page: ()=> PostView(), binding: PostBinding()),
+      GetPage(name: AppRouteName.adminPostForm, page: ()=> PostFormView(), binding: PostFormBinding()),
+      GetPage(name: AppRouteName.adminPostCategory, page: ()=> CategoryView(), binding: CategoryBinding()),
+      GetPage(name: AppRouteName.adminPostCategoryForm, page: ()=> CategoryFormView(), binding: CategoryFormBinding()),
     ];
   }
 }
