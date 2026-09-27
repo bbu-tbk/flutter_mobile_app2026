@@ -21,6 +21,28 @@ class CategoryView extends GetView<CategoryController> {
           IconButton(onPressed: (){}, icon: Icon(Icons.add)),
         ],
       ),
+      body: Obx((){
+        return
+          controller.loading.value == true ?
+              Center(
+                child: CircularProgressIndicator(
+                  color: Colors.cyan,
+                ),
+              ) :
+          Container(
+          padding: EdgeInsets.symmetric(
+            horizontal: 16
+          ),
+          child: ListView.builder(
+            itemCount: controller.categoryList.length,
+              itemBuilder: (context, index){
+            return ListTile(
+              title: Text("data"),
+            );
+          }),
+        );
+      }),
     );
+
   }
 }
